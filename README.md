@@ -50,15 +50,7 @@ The number of this constant can be easily changed within the code in order to fi
    
 
 ## Folder structure
-` IronHack_Module1_Project /
-├─ Data/
-│  ├─ CSV_exports/
-│  ├─ CSV_imports/
-├─ p_acquisition/
-├─ p_analysis/
-├─ p_reprting
-├─ p_wrangling/
-├─ README.md`
+(imagen 3)
 
 ## TODO
 Code is currently being refactored
