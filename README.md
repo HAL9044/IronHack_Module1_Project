@@ -49,4 +49,16 @@ The number of this constant can be easily changed within the code in order to fi
  The first two, on the other hand, will only export a map with the specified destinations.
    
 
+## Folder structure
+` IronHack_Module1_Project /
+├─ Data/
+│  ├─ CSV_exports/
+│  ├─ CSV_imports/
+├─ p_acquisition/
+├─ p_analysis/
+├─ p_reprting
+├─ p_wrangling/
+├─ README.md`
 
+## TODO
+Code is currently being refactored
