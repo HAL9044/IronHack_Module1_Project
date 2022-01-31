@@ -41,6 +41,8 @@ The number of this constant can be easily changed within the code in order to fi
    
  `python main.py -a select`
  
+ ![alt text](https://github.com/HAL9044/IronHack_Module1_Project/blob/main/images/imagen%201(1).jpg)
+ 
  Finally, you can get a csv with all of the closest station for every single consulate and embassy in Madrid:  
  
  `python main.py -a all`  
