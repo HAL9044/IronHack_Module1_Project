@@ -1,17 +1,11 @@
-from p_analysis import m_analysis as ma
 from p_acquisition import m_acquisition as macq
 from p_wrangling import m_wrangling as mw
 from p_reporting import m_reporting as mr
-from gettext import find
-from typing_extensions import final
-import sys 
+
 import argparse
-from fuzzywuzzy import fuzz
+
 import warnings
-import pandas as pd
-from PIL import Image
-import base64
-from io import BytesIO
+
 
 warnings.simplefilter(action='ignore')
 

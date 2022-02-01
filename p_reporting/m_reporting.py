@@ -1,12 +1,9 @@
 import pandas as pd
 import requests
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import requests
+
 from PIL import Image
-import base64
 from io import BytesIO
+
 from p_analysis import m_analysis as ma
 
 #Generates final dataframe when 
@@ -41,14 +38,14 @@ def user_prompt (selec_dframes, variables):
             if arg_0 == "singleConsulate":                                            #Comparing argparse arguments in order to execute desired function
                 tkn = "C"                                                             #This token is used to accelerate the search for place of interest (Consulate)
                 coor = ma.question_answer(tkn, arg_1, selec_dframes)                  #Function prints closest bike station to the user while returning coordinates from both places
-                image = mr.route_img_generator(coor[1], coor[0], coor[3], coor[2])    #Coordinates are used to plot data into map
+                image = route_img_generator(coor[1], coor[0], coor[3], coor[2])    #Coordinates are used to plot data into map
                 image.save("../data/CSV_exports/route.png")   #image is saved in CSV_exports
                 print("\n **An image file with the locations on a map has been saved into the CSV_exports folder in data...\n")
                           
             elif arg_0 == "singleEmbassy":                                             #This is in essence the same than above, but since tkn is E, this will look for embassies
                 tkn = "E"
                 coor = ma.question_answer(tkn, arg_1, selec_dframes)
-                image = mr.route_img_generator(coor[1], coor[0], coor[3], coor[2])
+                image = route_img_generator(coor[1], coor[0], coor[3], coor[2])
                 image.save("../data/CSV_exports/route.png")
                 print("\n **An image file with the locations on a map has been saved into the CSV_exports folder in data...\n")
                 
@@ -59,7 +56,7 @@ def user_prompt (selec_dframes, variables):
                     if inp == "y":
 
                         inp2 = input("\n **Please enter name for the final csv (No need to add '.csv' at the end): \n")
-                        route = "../data/CSV_exports/" + inp2 + ".csv"
+                        route = "./data/CSV_exports/" + inp2 + ".csv"
                         final_dframe = pd.DataFrame()                                                                   
                         emba_dframe = selec_dframes[0]
                         bike_dframe = selec_dframes[1]
